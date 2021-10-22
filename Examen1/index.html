@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen 1</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+  <!-- CONTENEDOR DE LAS ACCIONES DISPONIBLES -->
+  <div class="container">
+    <button id="showInsertBtn" class="Insertar">Insertar</button>
+  </div>
+
+
+  <!-- CONTENEDOR DEL FORMULARIO -->
+  <div class="container">
+    <p id="noForm" class="empty-content">- - -</p>
+    <form id="mainForm" class="no-active">
+      <div class="box1">
+        <div class="container2">
+          <h1>Examen</h1>
+          <div class="Contenido">
+            <i class="bi bi-info-circle-fill"></i>
+            <input type="number" id="matricula" required placeholder="Matricula">
+          </div>
+
+          <div class="Contenido">
+            <i class="bi bi-person-circle"></i>
+            <input type="text" id="nombre" required placeholder="Nombre">
+          </div>
+
+          <div class="Contenido">
+            <i class="bi bi-book"></i>
+            <input type="text" id="materia" required placeholder="Materia">
+          </div>
+
+          <div class="Contenido">
+            <i class="bi bi-star-fill"></i>
+            <input type="number" id="calificacion" required placeholder="Calificacion">
+          </div>
+
+          <p id="dataError" class="no-active warning">Revisa los datos, parece que algo esta incompleto!</p>
+          <br>
+          <button id="insertBtn" class="Listo">Listo</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- CONTENEDOR DEL FORMULARIO DE BUSQUEDA -->
+  <div id="searchForm" class="container no-active">
+    <form>
+      <div class="box2">
+        <div class="Contenido2">
+          <i class="bi bi-search"></i>
+          <input type="search" id="searchInput" placeholder="Inserte una matricula" placeholder="Inserte una matricula">
+          <button id="searchBtn" class="Buscar">Buscar</button>
+          <button id="allBtn" class="Mostrar">Mostrar Todos</button>
+          <br>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- CONTENEDOR EN DONDE SE INSERTARAN LOS DATOS -->
+  <div class="container" id="dataContainer">
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
