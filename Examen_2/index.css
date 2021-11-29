@@ -1,0 +1,111 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50vh 50vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.preview {
+  background-color: yellow;
+  overflow-y: auto;
+}
+
+.operations {
+  background-color: green;
+  overflow-y: auto;
+}
+
+.structures {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.structures button {
+  flex: 1;
+  background-color: white;
+  transition: 0.3s all ease;
+}
+
+.structures button:hover {
+  background-color: red;
+}
+
+.action {
+  background-color: lightgray;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.action > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.preview > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.preview > div {
+  padding: 10px;
+}
+
+.preview > div > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.preview > div > div > div {
+  background-color: cyan;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 10px solid black;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+
+  .structures {
+    grid-column: auto;
+    grid-row: 1 / 1;
+  }
+}
