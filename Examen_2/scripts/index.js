@@ -29,3 +29,12 @@ for (let i = 0; i < allOperations.length; ++i) {
     operationsContainer.innerHTML = allOperations[i];
   });
 }
+
+// SPANS ANIMATION
+const spans = Array.from(document.querySelectorAll(".preview span"));
+
+setInterval(() => {
+  for (const span of spans) {
+    span.textContent = span.textContent === "" ? "_" : "";
+  }
+}, 550);

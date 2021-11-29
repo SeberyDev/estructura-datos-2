@@ -116,5 +116,5 @@ const generalPrint = (container, structure) => {
     return `<div>${dat}</div>`;
   });
 
-  container.innerHTML = html;
+  container.innerHTML = html.join().replaceAll(",", "");
 };

@@ -19,6 +19,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50vh 50vh;
+  font-family: "Ubuntu", sans-serif;
+}
+
+input {
+  font-family: "Ubuntu", sans-serif;
 }
 
 ul {
@@ -35,12 +40,15 @@ button {
 }
 
 .preview {
-  background-color: yellow;
+  padding: 10px 0;
+  background-color: #000;
+  color: #39ff14;
+  font-family: "Fira Code", monospace;
   overflow-y: auto;
 }
 
 .operations {
-  background-color: green;
+  background-color: white;
   overflow-y: auto;
 }
 
@@ -55,23 +63,52 @@ button {
   flex: 1;
   background-color: white;
   transition: 0.3s all ease;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .structures button:hover {
-  background-color: red;
+  background-color: black;
+  color: white;
 }
 
 .action {
-  background-color: lightgray;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
   margin: 10px;
+  font-size: 1.8rem;
 }
 
 .action > *:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.action button {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: 0.3s all ease;
+}
+
+.action button:hover {
+  opacity: 0.6;
+  background-color: black;
+  color: white;
+}
+
+input {
+  border: none;
+  padding: 10px;
+  background-color: white;
+}
+
+input:focus {
+  outline: 2px solid black;
 }
 
 .preview > div:not(:last-child) {
@@ -85,17 +122,25 @@ button {
 .preview > div > div {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 15px;
+  font-size: 1.8rem;
+}
+
+.preview h2,
+.preview p {
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .preview > div > div > div {
-  background-color: cyan;
   width: 50px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 10px solid black;
   margin-bottom: 10px;
+  border: 2px solid #39ff14;
+  color: #39ff14;
 }
 
 @media only screen and (max-width: 700px) {
